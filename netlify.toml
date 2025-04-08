@@ -1,0 +1,4 @@
+[build.environment]
+  NODE_VERSION = "16.20.2"  # 或降级到 Netlify 兼容的 v15.14.0
+[build]
+  command = "npm install && npm run generate"  # 确保先安装依赖
