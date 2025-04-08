@@ -1,0 +1,218 @@
+{
+    "zh": { 
+        "name": "中文",
+        "SEP": "　",
+        "QUOTE_L": "【",
+        "QUOTE_R": "】",
+        "M_SPECIAL": "／特殊召唤",
+        "M_EFFECT": "／效果",
+        "M_PENDULUM": "／灵摆",
+        "Subtype": {
+            "Fusion": "／融合", 
+            "Ritual": "／仪式", 
+            "Synchro": "／同步", 
+            "Xyz": "／超量", 
+            "Link": "／连结", 
+            "Token": "／衍生物"
+        },
+        "Effect": {
+            "none": "",
+            "normal": "",
+            "toon": "／卡通",
+            "spirit": "／灵魂",
+            "union": "／联合",
+            "gemini": "／二重",
+            "flip": "／反转",
+            "tuner": "／协调"
+        },
+        "Race": {
+            "fiend": "恶魔族",
+            "zombie": "不死族",
+            "sea_serpent": "海龙族",
+            "thunder": "雷族",
+            "rock": "岩石族",
+            "machine": "机械族",
+            "dinosaur": "恐龙族",
+            "beast": "兽族",
+            "insect": "昆虫族",
+            "fish": "鱼族",
+            "plant": "植物族",
+            "beast_warrior": "兽战士族",
+            "warrior": "战士族",
+            "winged_beast": "鸟兽族",
+            "fairy": "天使族",
+            "dragon": "龙族",
+            "reptile": "爬虫类族",
+            "aqua": "水族",
+            "pyro": "炎族",
+            "spellcaster": "法师族",
+            "wyrm": "幻龙族",
+            "cyberse": "网络族",
+            "psychic": "超能族",
+            "divine_beast": "幻神兽族",
+            "creator_god": "创造神族"
+        },
+        "Spell": "魔法卡",
+        "Trap": "陷阱卡",
+
+        "Default": {
+            "title": "欢迎参加我们的婚礼！",
+            "info": "祝大家在我们的婚礼上吃好喝好，玩的开心！",
+            "pInfo": "",
+            "size": 30, "pSize": 22
+        },
+
+        "_templateLang": "jp",
+        "_fontName": ["cn","jp","en"],
+        "_offset": {
+            "tS": 0, "sS": 0,
+            "tX": 0, "tY": 0, 
+            "sX1": 0, "sX2": 0, "sY1": 0, "sY2": 0,
+            "oX": 0, "oY": 0, "lh": 7
+        }
+    },
+    "jp": { 
+        "name": "日本語 (Japanese)",
+        "SEP": "　",
+        "QUOTE_L": "【",
+        "QUOTE_R": "】",
+        "M_SPECIAL": "／特殊召喚",
+        "M_EFFECT": "／効果",
+        "M_PENDULUM": "／ペンデュラム",
+        "Subtype": {
+            "Fusion": "／融合", 
+            "Ritual": "／儀式", 
+            "Synchro": "／シンクロ", 
+            "Xyz": "／エクシーズ", 
+            "Link": "／リンク", 
+            "Token": "／トークン"
+        },
+        "Effect": {
+            "none": "",
+            "normal": "",
+            "toon": "／トゥーン",
+            "spirit": "／スピリット",
+            "union": "／ユニオン",
+            "gemini": "／デュアル",
+            "flip": "／リバース",
+            "tuner": "／チューナー"
+        },
+        "Race": {
+            "fiend": "悪魔族",
+            "zombie": "アンデット族",
+            "sea_serpent": "海竜族",
+            "thunder": "雷族",
+            "rock": "岩石族",
+            "machine": "機械族",
+            "dinosaur": "恐竜族",
+            "beast": "獣族",
+            "insect": "昆虫族",
+            "fish": "魚族",
+            "plant": "植物族",
+            "beast_warrior": "獣戦士族",
+            "warrior": "戦士族",
+            "winged_beast": "鳥獣族",
+            "fairy": "天使族",
+            "dragon": "ドラゴン族",
+            "reptile": "爬虫類族",
+            "aqua": "水族",
+            "pyro": "炎族",
+            "spellcaster": "魔法使い族",
+            "wyrm": "幻竜族",
+            "cyberse": "サイバース族",
+            "psychic": "サイキック族",
+            "divine_beast": "幻神獣族",
+            "creator_god": "創造神族"
+        },
+        "Spell": "魔法カード",
+        "Trap": "罠カード",
+
+        "Default": {
+            "title": "超天新龍オッドアイズ・レボリューション・ドラゴン",
+            "info": "このカードは通常召喚できない。手札からのP召喚、または自分フィールドのドラゴン族の融合・S・Xモンスターを１体ずつリリースした場合のみ特殊召喚できる。①：このカードを手札から捨て、５００LPを払って発動できる。デッキからレベル８以下のドラゴン族Pモンスター１体を手札に加える。②：このカードの攻撃力・守備力は相手のLPの半分の数値分アップする。③：１ターンに１度、LPを半分払って発動できる。このカード以外のお互いのフィールド・墓地のカードを全て持ち主のデッキに戻す。",
+            "pInfo": "①：自分はドラゴン族モンスターしかＰ召喚できない。この効果は無効化されない。②：自分の墓地のドラゴン族の融合・Ｓ・Ｘモンスター１体を対象として発動できる。このカードを破壊し、そのモンスターを特殊召喚する。",
+            "size": 17, "pSize": 19
+        },
+
+        "_templateLang": "jp",
+        "_fontName": ["jp2","jp2","jp2","zh","cn","en"],
+        "_offset": {
+            "tS": 0, "sS": 0,
+            "tX": -5, "tY": 8, 
+            "sX1": -10, "sX2": 9, "sY1": 8, "sY2": 3,
+            "oX": 10, "oY": 5, "lh": 10
+        }
+    },
+    "en": { 
+        "name": "English",
+        "SEP": "     ",
+        "QUOTE_L": "[",
+        "QUOTE_R": "]",
+        "M_SPECIAL": "/Special Summon",
+        "M_EFFECT": "/Effect",
+        "M_PENDULUM": "/Pendulum",
+        "Subtype": {
+            "Fusion": "/Fusion", 
+            "Ritual": "/Ritual", 
+            "Synchro": "/Synchro", 
+            "Xyz": "/Xyz", 
+            "Link": "/Link", 
+            "Token": "/Token"
+        },
+        "Effect": {
+            "none": "",
+            "normal": "",
+            "toon": "/Toon",
+            "spirit": "/Spirit",
+            "union": "/Union",
+            "gemini": "/Gemini",
+            "flip": "/Flip",
+            "tuner": "/Tuner"
+        },
+        "Race": {
+            "fiend": "Fiend",
+            "zombie": "Zombie",
+            "sea_serpent": "Sea Serpent",
+            "thunder": "Thunder",
+            "rock": "Rock",
+            "machine": "Machine",
+            "dinosaur": "Dinosaur",
+            "beast": "Beast",
+            "insect": "Insect",
+            "fish": "Fish",
+            "plant": "Plant",
+            "beast_warrior": "Beast-Warrior",
+            "warrior": "Warrior",
+            "winged_beast": "Winged Beast",
+            "fairy": "Fairy",
+            "dragon": "Dragon",
+            "reptile": "Reptile",
+            "aqua": "Aqua",
+            "pyro": "Pyro",
+            "spellcaster": "Spellcaster",
+            "wyrm": "Wyrm",
+            "cyberse": "Cyberse",
+            "psychic": "Psychic",
+            "divine_beast": "Divine-Beast",
+            "creator_god": "Creator God"
+        },
+        "Spell": "Spell Card",
+        "Trap": "Trap Card",
+        
+        "Default": {
+            "title": "Odd-Eyes Revolution Dragon",
+            "info": "Cannot be Normal Summoned/Set. Must be either Pendulum Summoned from the hand, or Special Summoned (from your hand) by Tributing 3 Dragon monsters (1 Fusion, 1 Synchro, and 1 Xyz). You can discard this card and pay 500 LP; add 1 Level 8 or lower Dragon Pendulum Monster from your Deck to your hand. Gains ATK/DEF equal to half your opponent's LP. Once per turn: You can pay half your LP; shuffle all other cards on the field and in the GYs into the Deck.",
+            "pInfo": "You cannot Pendulum Summon monsters, except Dragon monsters. This effect cannot be negated. You can target 1 Dragon Fusion, Synchro, or Xyz Monster in your GY; destroy this card, and if you do, Special Summon that monster.",
+            "size": 20, "pSize": 22
+        },
+
+        "_templateLang": "en",
+        "_fontName": ["en","en2","en3","zh","cn","en"],
+        "_offset": {
+            "tS": 10, "sS": 5,
+            "tX": 0, "tY": -6, 
+            "sX1": -17, "sX2": 3, "sY1": 0, "sY2": 0,
+            "oX": 15, "oY": -3, "lh": 7
+        }
+    }
+}
