@@ -83,27 +83,19 @@
                 </b-col>
               </b-row>
 
-                <!-- 新增预览弹窗 -->
-              <b-modal 
-                id="preview-modal"
-                :title="ui[uiLang].preview_title"
-                @ok="handleConfirm"
-                @hidden="handleCancel"
-                ok-title="确定"
-                cancel-title="取消"
-              >
-                <img :src="tempPreviewUrl" class="preview-image">
-              </b-modal>
-
-              <!-- 原文件上传组件改造 -->
-              <b-form-file
-                ref="fileInput"
-                @change="handleFileChange"
-                :state="Boolean(cardImg)"
-                :placeholder="ui[uiLang].upload_image"
-                accept="image/*"
-                browse="✚"
-              ></b-form-file>
+              <!-- 卡圖 -->
+              <b-row class="my-3">
+                <b-col class="px-2">
+                  <b-form-file
+                    v-model="cardImg"
+                    :state="Boolean(cardImg)"
+                    :placeholder="ui[uiLang].upload_image"
+                    browse="✚"
+                    accept="image/*"
+                    :drop-placeholder="ui[uiLang].drag_and_drop"
+                  ></b-form-file>
+                </b-col>
+              </b-row>
 
               <!-- 卡種、卡面、效果 -->
               <b-row class="my-3">
@@ -322,8 +314,6 @@ export default {
       cardKey: '',
       cardTitle: '',
       cardImg: null,
-      tempFile: null,      // 临时存储文件对象
-      tempPreviewUrl: null, // 临时存储预览图片的URL
       cardType: 'Monster',
       cardSubtype: 'Normal',
       cardEff1: 'normal',
@@ -511,11 +501,7 @@ export default {
     setInterval(this.drawCard, 1500)
   },
   beforeDestroy () {
-    if(this.tempPreviewUrl) {
-    URL.revokeObjectURL(this.tempPreviewUrl); // 防止内存泄漏[4](@ref)
-  }
     window.removeEventListener('scroll', this.onScroll)
-    
   },
   methods: {
     ...mapMutations(['fireLoadingDialog', 'closeLoadingDialog']),
@@ -524,35 +510,6 @@ export default {
       this.fireLoadingDialog()
       this.drawCard()
     },
-
-      // 文件选择事件
-  handleFileChange(event) {
-    const file = event.target.files[0];
-    if (!file.type.startsWith('image/')) {
-      this.$bvToast.toast(this.ui[this.uiLang].invalid_format);
-      return;
-    }
-    
-    // 生成临时预览（性能优化方案）[3](@ref)
-    this.tempPreviewUrl = URL.createObjectURL(file);
-    this.tempFile = file;
-    
-    // 显示弹窗
-    this.$bvModal.show('preview-modal');
-  },
-
-    // 确认操作
-    handleConfirm() {
-    this.cardImg = this.tempFile;  // 正式存储文件
-    URL.revokeObjectURL(this.tempPreviewUrl);  // 释放内存[4](@ref)
-    this.tempFile = null;
-  },
-  // 取消操作
-  handleCancel() {
-    URL.revokeObjectURL(this.tempPreviewUrl);
-    this.tempFile = null;
-    this.$refs.fileInput.reset();  // 重置文件输入框[6](@ref)
-  },
 
     // 卡片繪製 - 繪製前準備
     drawCard () {
