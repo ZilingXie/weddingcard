@@ -272,7 +272,6 @@
               <!-- 按鈕區 -->
               <b-row class="my-3">
                 <b-col class="px-2">
-                  <button type="button" class="my-2 btn btn-info" @click="doDrawCard">{{ ui[uiLang].generate }}</button>&emsp;
                   <button type="button" class="my-2 btn btn-success" @click="download_img">{{ ui[uiLang].download }}</button>
                   <label style="color: #CCC;">&emsp;{{ ui[uiLang].auto_gen_note }}</label>
                 </b-col>
