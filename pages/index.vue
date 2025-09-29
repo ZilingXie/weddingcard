@@ -767,15 +767,34 @@ export default {
     },
 
     // 下載
+    // Filename rule: use the "你的尊姓大名" field (cardTitle) as filename.
+    // - trim
+    // - remove invalid chars \ / : * ? " < > | and control chars
+    // - collapse whitespace, remove trailing dot/space
+    // - limit to 100 chars
+    // - fallback to 'YuGiOh' if empty
+    // - use .png for msToBlob branch (IE), .jpg otherwise
     download_img () {
       const canvas = this.$refs.yugiohcard
+
+      const makeFilename = (base, ext) => {
+        let name = String(base || '').trim()
+        name = name.replace(/[\/\\:\*\?"<>\|\x00-\x1F]/g, '')
+        name = name.replace(/\s+/g, ' ')
+        name = name.replace(/[\. ]+$/u, '')
+        if (name.length > 100) name = name.slice(0, 100)
+        if (!name) name = 'YuGiOh'
+        const safeExt = String(ext || '').replace(/^\./, '')
+        return `${name}.${safeExt || 'jpg'}`
+      }
+
       if (canvas.msToBlob) { // for IE
         const blob = canvas.msToBlob();
-        window.navigator.msSaveBlob(blob, 'YuGiOh.png');
+        window.navigator.msSaveBlob(blob, makeFilename(this.cardTitle, 'png'));
       } else {
         const a = document.createElement('a');
         a.href = canvas.toDataURL("image/jpeg");
-        a.download = 'YuGiOh.jpg';
+        a.download = makeFilename(this.cardTitle, 'jpg');
         a.click();
       }
     },
